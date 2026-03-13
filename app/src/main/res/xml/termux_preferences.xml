@@ -1,0 +1,18 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Preference
+        app:title="@string/botwa_debugging_preferences_title"
+        app:summary="@string/botwa_debugging_preferences_summary"
+        app:fragment="com.brx.botwa.app.fragments.settings.botwa.DebuggingPreferencesFragment"/>
+
+    <Preference
+        app:title="@string/botwa_terminal_io_preferences_title"
+        app:summary="@string/botwa_terminal_io_preferences_summary"
+        app:fragment="com.brx.botwa.app.fragments.settings.botwa.TerminalIOPreferencesFragment"/>
+
+    <Preference
+        app:title="@string/botwa_terminal_view_preferences_title"
+        app:summary="@string/botwa_terminal_view_preferences_summary"
+        app:fragment="com.brx.botwa.app.fragments.settings.botwa.TerminalViewPreferencesFragment"/>
+
+</PreferenceScreen>

@@ -1,0 +1,21 @@
+name: Trigger BotWA Library Builds on Jitpack
+
+on:
+  release:
+    types:
+      - published
+
+jobs:
+  trigger-botwa-library-builds:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set vars
+        run: echo "TERMUX_LIB_VERSION=${GITHUB_REF/refs\/tags\/v/}" >> $GITHUB_ENV # Do not include "v" prefix
+      - name: Echo release
+        run: echo "Triggering botwa library builds on jitpack for '$TERMUX_LIB_VERSION' release after waiting for 3 mins"
+      - name: Trigger botwa library builds on jitpack
+        run: |
+          sleep 180 # It will take some time for the new tag to be detected by Jitpack
+          curl --max-time 600 --no-progress-meter "https://jitpack.io/com.brx.botwa/botwa-app/terminal-emulator/$TERMUX_LIB_VERSION/terminal-emulator-$TERMUX_LIB_VERSION.pom"
+          curl --max-time 600 --no-progress-meter "https://jitpack.io/com.brx.botwa/botwa-app/terminal-view/$TERMUX_LIB_VERSION/terminal-view-$TERMUX_LIB_VERSION.pom"
+          curl --max-time 600 --no-progress-meter "https://jitpack.io/com.brx.botwa/botwa-app/botwa-shared/$TERMUX_LIB_VERSION/botwa-shared-$TERMUX_LIB_VERSION.pom"

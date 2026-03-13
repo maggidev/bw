@@ -1,0 +1,49 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Preference
+        app:key="botwa"
+        app:title="@string/botwa_preferences_title"
+        app:summary="@string/botwa_preferences_summary"
+        app:fragment="com.brx.botwa.app.fragments.settings.BotWAPreferencesFragment"/>
+
+    <Preference
+        app:key="botwa_api"
+        app:title="@string/botwa_api_preferences_title"
+        app:summary="@string/botwa_api_preferences_summary"
+        app:isPreferenceVisible="false"
+        app:fragment="com.brx.botwa.app.fragments.settings.BotWAAPIPreferencesFragment"/>
+
+    <Preference
+        app:key="botwa_float"
+        app:title="@string/botwa_float_preferences_title"
+        app:summary="@string/botwa_float_preferences_summary"
+        app:isPreferenceVisible="false"
+        app:fragment="com.brx.botwa.app.fragments.settings.BotWAFloatPreferencesFragment"/>
+
+    <Preference
+        app:key="botwa_tasker"
+        app:title="@string/botwa_tasker_preferences_title"
+        app:summary="@string/botwa_tasker_preferences_summary"
+        app:isPreferenceVisible="false"
+        app:fragment="com.brx.botwa.app.fragments.settings.BotWATaskerPreferencesFragment"/>
+
+    <Preference
+        app:key="botwa_widget"
+        app:title="@string/botwa_widget_preferences_title"
+        app:summary="@string/botwa_widget_preferences_summary"
+        app:isPreferenceVisible="false"
+        app:fragment="com.brx.botwa.app.fragments.settings.BotWAWidgetPreferencesFragment"/>
+
+    <Preference
+        app:key="about"
+        app:title="@string/about_preference_title"
+        app:persistent="false"/>
+    <!-- app:layout="@layout/preference_markdown_text" -->
+
+    <Preference
+        app:key="donate"
+        app:title="@string/donate_preference_title"
+        app:persistent="false"
+        app:isPreferenceVisible="false"/>
+
+</PreferenceScreen>

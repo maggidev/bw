@@ -1,0 +1,1 @@
+include ':app', ':botwa-shared', ':terminal-emulator', ':terminal-view'
